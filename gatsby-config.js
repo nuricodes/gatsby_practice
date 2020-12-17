@@ -4,7 +4,22 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+
+
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: "Ayni's Website",
+    author: "Ayni",
+  },
+  // plugins: []
+  plugins: [
+    `gatsby-plugin-typography`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `srs`,
+        path: `${__dirname}/src/`,
+      },
+    },
+  ]
 }
